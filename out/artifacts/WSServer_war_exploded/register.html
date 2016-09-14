@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!--integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous"-->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+        //integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        //crossorigin="anonymous"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <noscript>
+        <style type="text/css">
+            body {background: #FFFFFF;}
+            form {display:none;}
+            p {margin: 2%; font-size: x-large;}
+        </style>
+        <p>
+            JavaScript is disabled. For this site to work correctly, it is necessary to enable JavaScript.<br/>
+            Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+            instructions how to enable JavaScript in your web browser</a>.
+        </p>
+    </noscript>
+
+    <form method="post" action="register">
+        <input type="hidden" name="page" value="register"/>
+        <input type="text" placeholder="first name" name="firstName" required minlength="3"/>
+        <input type="text" placeholder="last name" name="lastName" required minlength="3"/>
+        <input type="text" placeholder="email id" name="clientId" required
+               aria-describedby="email-format" aria-required="true" pattern="[^\s@]+@[^\s@]+\.[^\s@]+"/>
+        <span id="email-format" class="help">A valid email id</span>
+        <input type="password" placeholder="password" name="password" required
+               aria-describedby="password-format" aria-required="true"
+               pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,72}"/>
+                <span id="password-format" class="help">
+                    Min Length: 8, 1 Upper case, 1 Lower case, 1 digit, 1 special character
+                </span>
+        <input type="password" placeholder="repeat password" name="repassword" required/>
+        <button type="submit">create</button>
+        <p class="message">Already registered? <a href="login">Sign In</a></p>
+    </form>
+
+</body>
+</html>

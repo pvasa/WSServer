@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="ROOT">
+    <output-path>$PROJECT_DIR$/out/artifacts</output-path>
+    <root id="archive" name="ROOT.war">
+      <element id="artifact" artifact-name="WSServer:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="javax.mail" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/gson-2.6.2.jar" />
+          <element id="library" level="project" name="javax.websocket-api-1.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
